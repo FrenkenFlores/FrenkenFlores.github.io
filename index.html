@@ -6,8 +6,8 @@
     <title>Circle with Lines and Labels</title>
 </head>
 <body>
-    <canvas id="circleCanvas" width="700" height="500"></canvas>
-
+    <canvas hidden="true" id="circleCanvas" width="700" height="500"></canvas>
+    <img id="statsImage" src="" alt="stats" width="700" height="500">
     <script>
         var canvas = document.getElementById('circleCanvas');
         var context = canvas.getContext('2d');
@@ -151,6 +151,9 @@
             context.fillText(labels[i], textX, textY);
         }
         context.closePath();
+
+        const img = canvas.toDataURL('image/png')
+        document.getElementById('statsImage').src = img
     </script>
 </body>
 </html>
