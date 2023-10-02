@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle with Lines and Labels</title>
+</head>
+<body>
+    <canvas id="circleCanvas" width="700" height="500"></canvas>
+
+    <script>
+        var canvas = document.getElementById('circleCanvas');
+        var context = canvas.getContext('2d');
+
+        var centerX = canvas.width / 2;
+        var centerY = canvas.height / 2;
+        var radius = 200;
+        var labelRadiusInc = 30; // Adjust this for margin
+        var circleFillColor = '#eeeeee';
+        var shapeColor = '#34fff0AA';
+        var lineColor = '#ffffff';
+        var fontColor = 'black'; // Change the font color here
+        var labelBackgroundColor = "#00ff0066";
+
+        // Draw the 0 circle
+        context.beginPath();
+        context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        context.fillStyle = "#00ff00";
+        context.fill();
+        context.closePath();
+
+        // Draw the 1 circle
+        context.beginPath();
+        context.arc(centerX, centerY, radius - 1, 0, 2 * Math.PI);
+        context.fillStyle = circleFillColor;
+        context.fill();
+        context.closePath();
+
+        // Draw the 2 circle
+        context.beginPath();
+        context.arc(centerX, centerY, 2 * radius / 3, 0, 2 * Math.PI);
+        context.fillStyle = "#e8e8e8";
+        context.fill();
+        context.closePath();
+
+        // Draw the 3 circle
+        context.beginPath();
+        context.arc(centerX, centerY, radius / 3, 0, 2 * Math.PI);
+        context.fillStyle = "#d4d4d4";
+        context.fill();
+        context.closePath();
+
+        // Define labels and their corresponding percentages
+        var labels = [
+            "Computer Architecture",
+            "OS",
+            "Application Architecture",
+            "Imperative Programming",
+            "Web",
+            "AI",
+            "BigData",
+            "Data Structures & Algorithms",
+            "Databases & SQL",
+            "Cloud Platforms",
+            "Parallel Programming",
+            "Rigor",
+            "Graphics",
+            "Security",
+            "Unix",
+            "Functional Programming",
+            "Object Oriented Programming",
+            "Network & System Administration",
+            "Math",
+        ];
+        var percentages = [
+            0.60,
+            0.30,
+            0.60,
+            0.60,
+            0.77,
+            0.20,
+            0.11,
+            0.10,
+            0.99,
+            0.42,
+            0.72,
+            0.12,
+            0.52,
+            0.22,
+            0.42,
+            0.92,
+            0.12,
+            0.99,
+            0.59,
+        ];
+
+        // Set a smaller font size
+        context.font = "14px Arial";
+        context.fillStyle = fontColor; // Change the font color here
+
+        for (var i = 0; i < labels.length; i++) {
+            var angle = (Math.PI / (labels.length / 2)) + i * (Math.PI / (labels.length / 2));
+            var x = centerX + radius * Math.cos(angle);
+            var y = centerY + radius * Math.sin(angle);
+
+            // Draw a line from the center to the edge of the circle
+            context.beginPath();
+            context.moveTo(centerX, centerY);
+            context.lineTo(x, y);
+            context.strokeStyle = lineColor;
+            context.stroke();
+            context.closePath();
+        }
+
+
+        // Draw the shape with edges at the specified percentages
+        context.fillStyle = shapeColor;
+        context.beginPath();
+
+        for (var i = 0; i < percentages.length; i++) {
+            var angle = (Math.PI / (percentages.length / 2)) + i * (Math.PI / (percentages.length / 2));
+            var edgeX = centerX + radius * Math.cos(angle) * percentages[i];
+            var edgeY = centerY + radius * Math.sin(angle) * percentages[i];
+            if (i === 0) {
+                context.moveTo(edgeX, edgeY);
+            } else {
+                context.lineTo(edgeX, edgeY);
+            }
+        }
+        context.closePath();
+        context.fill();
+        for (var i = 0; i < labels.length; i++) {
+            var angle = (Math.PI / (labels.length / 2)) + i * (Math.PI / (labels.length / 2));
+            var x = centerX + radius * Math.cos(angle);
+            var y = centerY + radius * Math.sin(angle);
+
+            // Draw the green background for labels
+            // Calculate text width to center the label
+            var textWidth = context.measureText(labels[i]).width;
+            var textHeight = 18; // Adjust as needed
+            // Adjust text position for better visibility
+            var textX = (x + labelRadiusInc * Math.cos(angle)) - textWidth / 2;
+            var textY = (y + labelRadiusInc * Math.sin(angle)) + 6; // Adjust this for vertical alignment
+
+            var labelPadding = 5; // Adjust as needed
+            context.fillStyle = labelBackgroundColor;
+            context.fillRect(textX - labelPadding, textY - textHeight + labelPadding, textWidth + 2 * labelPadding, textHeight);
+
+            // Draw the label text on top
+            context.fillStyle = fontColor;
+            context.fillText(labels[i], textX, textY);
+        }
+        context.closePath();
+    </script>
+</body>
+</html>
+
