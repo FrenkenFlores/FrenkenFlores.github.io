@@ -79,6 +79,9 @@ author:
     - label: "Habr Career"
       icon: "fa fa-briefcase"
       url: "https://career.habr.com/frenkenflores"
+    - label: "Stack Overflow"
+      icon: "fa fa-stack-overflow"
+      url: https://stackoverflow.com/users/13576060/fflores
 
 footer:
   links:
@@ -97,6 +100,12 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/s-evloev/"
+    - label: "Habr Career"
+      icon: "fa fa-briefcase"
+      url: "https://career.habr.com/frenkenflores"
+    - label: "Stack Overflow"
+      icon: "fa fa-stack-overflow"
+      url: https://stackoverflow.com/users/13576060/fflores
 
 defaults:
   # _posts
