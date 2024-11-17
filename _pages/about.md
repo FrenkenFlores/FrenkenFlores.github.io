@@ -2,7 +2,18 @@
 permalink: /about/
 title: "About"
 ---
+Всем привет!
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+Мой путь в IT начался в универе на курсе по языку Си и C++. В то время у меня зародился интерес к этой теме, и я решил поступить в Школу 21 от Сбера. Тогда она только открылась и была частью международной школы 42 School. Я прошёл входной тест, отборочный интенсив и поступил на четвёртую волну — так всё началось.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Сегодня я экс-разработчик Samsung R&D, ментор в Yandex EdTech и инженер-разработчик в ЦОДе Wildberries.
+
+Я твёрдо намерен активно вести этот блог, дабы оставить свой след в области компьютерных наук, несмотря на то, что сложно совмещать подобное занятие с основной работой. У меня есть привычка оставлять себе заметки, связанные с работой. И я замечал, как я неоднократно к ним возвращался, чтобы вспомнить что-то по работе. Поэтому вижу смысл выкладывать эти заметки в публичном доступе, чтобы все могли извлечь пользу.
+
+В этом блоге я планирую публиковать:
+— заметки по работе и всякие HOW-TO;
+— книги в области компьютерных наук, которые покорили мой разум, и заметки к ним;
+— свои идеи и мысли о текущем положении дел в IT;
+— заметки о карьерном росте и о том, как развиваться в этой сфере;
+— как я делаю стартапы и переживаю их провалы;
+— и многое другое.
