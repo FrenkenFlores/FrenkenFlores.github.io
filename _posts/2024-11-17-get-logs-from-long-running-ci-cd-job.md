@@ -1,6 +1,5 @@
 ---
 title: "Получение логов от задачи GitLab CI/CD, ошибка 500"
-date: 2024-11-17T21:10:10
 categories:
   - blog
 tags:
