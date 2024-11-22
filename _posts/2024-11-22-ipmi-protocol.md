@@ -10,3 +10,6 @@ tags:
 ## IPMI
 ## Remote Management and Control Protocol (RMCP)
 https://www.dmtf.org/sites/default/files/standards/documents/DSP0114.pdf
+
+## PyPi
+https://github.com/kontron/python-ipmi
