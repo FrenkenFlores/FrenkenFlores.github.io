@@ -15,6 +15,13 @@ tags:
 
 При выполнении длительной задачи GitLab CI/CD, чей размер логов превышает стандартный лимит, иногда возникает проблема с просмотром логов - при попытке их получить появляется ошибка с кодом `500`. Необходимо проверить статус выполнения задачи и определить, нужно ли её прервать.
 
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/get-logs-from-long-running-ci-cd-job/photo_1.png)
+{: .full}
+*Картинка 1. Ошибка при открытии задачи CI/CD в GitLab*
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/get-logs-from-long-running-ci-cd-job/photo_2.png)
+{: .full}
+*Картинка 2. Ошибка при попытки получения сырых логов задачи CI/CD в GitLab*
 
 ## Сырые логи
 
